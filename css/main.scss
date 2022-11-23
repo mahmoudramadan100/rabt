@@ -5,21 +5,21 @@
 @font-face {
 	font-family: 'NotoKufiArabic';
 	src: url('../font/NotoKufiArabic-Medium.ttf') format('truetype');
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'NotoKufiArabic';
-	src: url('../font/NotoKufiArabic-Regular.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 }
-@font-face {
-	font-family: 'NotoKufiArabic';
-	src: url('../font/NotoKufiArabic-bold.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'NotoKufiArabic';
+// 	src: url('../font/NotoKufiArabic-Regular.ttf') format('truetype');
+// 	font-weight: 300;
+// 	font-style: normal;
+// }
+// @font-face {
+// 	font-family: 'NotoKufiArabic';
+// 	src: url('../font/NotoKufiArabic-bold.ttf') format('truetype');
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
 
 * {
     box-sizing: border-box;
@@ -1014,7 +1014,9 @@ select {
         }
 
     }
-
+    .tab-content {
+        border-right: 1px solid rgba($gray-color, 0.8);
+    }
     .nav-tabs {
         padding: 10px 0;
         display: flex;
