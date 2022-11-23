@@ -431,9 +431,54 @@ select {
             padding-top: 60px;
         }
     }
+.logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: 200px;
+    height: 100px;
+    background-color: $white-color;
+    border-radius: 8% 10% 0% 100% / 27% 0% 0% 55%  ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 3.5px 8px -1px #6a6a6a;
+    img {
+        max-width: 160px;
+        max-height: 75px;
+        object-fit: contain;
+        display: flex;
+        @include breakpoints(medium) {
+            width: 100px;
+            height: 60px;
+        }
+        @include breakpoints(small) {
+            width: 95px;
+            height: 55px;
+        }
+        @include breakpoints(mobile) {
+            width: 90px;
+            height: 50px;
+        }
+    }
 
+    @include breakpoints(medium) {
+        width: 140px;
+        height: 70px;
+    }
+    @include breakpoints(small) {
+        width: 120px;
+        height: 65px;
+    }
+    @include breakpoints(mobile) {
+        width: 110px;
+        height: 60px;
+    }
+}
     // Start Home Page
     .home {
+        position: relative;
         background-image: url(../img/bg.webp);
         background-repeat: no-repeat;
         background-size: cover;
@@ -571,7 +616,7 @@ select {
         // End Navbar
         .info {
             display: flex;
-            height: 50vh;
+            // height: 50vh;
             align-items: center;
 
             .import {
@@ -872,6 +917,7 @@ select {
     font-size: 12px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
     input {
         width: 40px;
@@ -1150,6 +1196,13 @@ select {
     margin-left: 20px;
     padding-top: 30px;
 
+    @include breakpoints (small) {
+        justify-content: center;
+    }
+    @include breakpoints (mobile) {
+        justify-content: center;
+    }
+
     li {
         display: inline-block;
         padding: 0 5px;
@@ -1210,6 +1263,17 @@ select {
 
     .modal-content {
         width: 600px;
+        margin: 0 auto;
+
+        @include breakpoints(medium) {
+            width: 550px;
+        }
+        @include breakpoints(small) {
+            width: 350px;
+        }
+        @include breakpoints(mobile) {
+            width: 300px;
+        }
     }
 
     .modal-body {
@@ -1260,6 +1324,7 @@ select {
                     font-size: 14px;
                     color: #000;
                     display: block;
+                    margin-top: 15px;
                 }
                 input {
                     display: block;
@@ -1379,6 +1444,7 @@ select {
                 text-align: center;
                 color: $main-color !important;
                 font-size: 13px;
+                margin-top: 15px;
             }
             .icon-upload {
                 font-size: 17px;
@@ -1474,4 +1540,3 @@ select {
         }
     }
 }
-

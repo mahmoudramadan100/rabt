@@ -103,7 +103,7 @@ select:focus {
     height: 85px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login .img {
     max-width: 150px;
     height: 80px;
@@ -152,7 +152,7 @@ select:focus {
     font-size: 12px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login form .form-group input::-moz-placeholder {
     font-size: 11px;
   }
@@ -173,7 +173,7 @@ select:focus {
     font-size: 13px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login form .form-group input {
     font-size: 12px;
   }
@@ -195,7 +195,7 @@ select:focus {
     width: 300px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login form .form-group {
     width: 300px;
   }
@@ -218,7 +218,7 @@ select:focus {
     font-size: 13px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login form .forget input[type=checkbox] {
     font-size: 10px;
   }
@@ -235,7 +235,7 @@ select:focus {
     font-size: 12px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login form .forget .form-check {
     font-size: 12px;
   }
@@ -255,7 +255,7 @@ select:focus {
     font-size: 13px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login form .forget a {
     font-size: 12px;
   }
@@ -292,7 +292,7 @@ select:focus {
     margin: 10px auto;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login .btn-login {
     width: 230px;
     margin: 10px auto 0;
@@ -310,7 +310,7 @@ select:focus {
     font-size: 14px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login span {
     font-size: 13px;
   }
@@ -327,7 +327,7 @@ select:focus {
     padding-right: 30px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login {
     width: 300px;
     padding-right: 20px;
@@ -349,7 +349,7 @@ select:focus {
     font-size: 13px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login .footer {
     font-size: 12px;
   }
@@ -375,7 +375,7 @@ select:focus {
     padding-top: 60px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .body-login {
     width: 90%;
     -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 40%);
@@ -421,7 +421,7 @@ select:focus {
     width: 230px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .re-code .btn .btn-login {
     margin: 5px auto;
     width: 230px;
@@ -439,7 +439,7 @@ select:focus {
     font-size: 14px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .re-code .btn span {
     font-size: 13px;
   }
@@ -460,7 +460,7 @@ select:focus {
     flex-direction: column;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .re-code .btn {
     width: 300px;
     padding-right: 20px;
@@ -475,13 +475,72 @@ select:focus {
     padding-top: 60px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .re-code {
     padding-top: 60px;
   }
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 8% 10% 0% 100%/27% 0% 0% 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 3.5px 8px -1px #6a6a6a;
+}
+.logo img {
+  max-width: 160px;
+  max-height: 75px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo img {
+    width: 100px;
+    height: 60px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .logo img {
+    width: 95px;
+    height: 55px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .logo img {
+    width: 90px;
+    height: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    width: 140px;
+    height: 70px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .logo {
+    width: 120px;
+    height: 65px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .logo {
+    width: 110px;
+    height: 60px;
+  }
+}
+
 .home {
+  position: relative;
   background-image: url(../img/bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -585,7 +644,7 @@ select:focus {
 .home .navbar .ul-nav li a:hover {
   color: #1196b1;
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .home .navbar .ul-nav li a {
     font-size: 12px;
   }
@@ -615,7 +674,7 @@ select:focus {
     font-size: 12px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .home .navbar .attachment {
     margin: 10px auto;
     font-size: 12px;
@@ -623,7 +682,6 @@ select:focus {
 }
 .home .info {
   display: flex;
-  height: 50vh;
   align-items: center;
 }
 .home .info .import {
@@ -699,7 +757,7 @@ select:focus {
     font-size: 13px;
   }
 }
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 0) and (max-width: 576px) {
   .home .footer {
     font-size: 12px;
   }
@@ -903,6 +961,7 @@ select:focus {
   font-size: 12px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .Pagination input {
   width: 40px;
@@ -1141,6 +1200,16 @@ select:focus {
   margin-left: 20px;
   padding-top: 30px;
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  .btn-send {
+    justify-content: center;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .btn-send {
+    justify-content: center;
+  }
+}
 .btn-send li {
   display: inline-block;
   padding: 0 5px;
@@ -1194,6 +1263,22 @@ select:focus {
 }
 .modal .modal-content {
   width: 600px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .modal .modal-content {
+    width: 550px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .modal .modal-content {
+    width: 350px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .modal .modal-content {
+    width: 300px;
+  }
 }
 .modal .modal-body {
   margin: 10px;
@@ -1241,6 +1326,7 @@ select:focus {
   font-size: 14px;
   color: #000;
   display: block;
+  margin-top: 15px;
 }
 .modal .modal-body .tab-content .form input {
   display: block;
@@ -1355,6 +1441,7 @@ select:focus {
   text-align: center;
   color: #1196b1 !important;
   font-size: 13px;
+  margin-top: 15px;
 }
 .modal .export .upload .icon-upload {
   font-size: 17px;
