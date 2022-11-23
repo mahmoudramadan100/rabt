@@ -1525,4 +1525,14 @@ select:focus {
 .modal .bttn-send .icon {
   padding: 0 30px 0 0px;
   color: #bdbdbd;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .modal .modal-footer {
+    justify-content: center;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .modal .modal-footer {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=main.css.map */
