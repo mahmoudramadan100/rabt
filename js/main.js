@@ -1,0 +1,31 @@
+// $(function () {
+//     $('[data-toggle="tooltip"]').tooltip()
+//   })
+
+  $('.unread').toolbar({
+    content: '#toolbar-unread',
+      position: 'bottom',
+      event: 'click',
+    hideOnClick: true
+  });
+  $('.login').toolbar({
+    content: '#login',
+      position: 'bottom'
+  });
+
+  $('.link').toolbar({
+    content: '#link',
+      position: 'bottom'
+  });
+  $('.share').toolbar({
+    content: '#share',
+      position: 'bottom'
+  });
+  $('.info-icon').toolbar({
+    content: '#info',
+      position: 'right'
+  });
+  // $('.icon').toolbar({
+  //   content: '#icon',
+  //     position: 'top'
+  // });
