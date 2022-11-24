@@ -28,16 +28,19 @@
 body {
     font-family: 'NotoKufiArabic', sans-serif;
     box-sizing: border-box;
-    // overflow: hidden !important;
     text-align: right;
     direction: rtl; 
-    // overflow: hidden;
     width: 100%;
-    // height: 100vh;
-    background: $linear-color;
-    // background-color: linear-gradient(90deg, rgba(113,165,122,1) 0%, rgba(77,170,150,1) 44%, rgba(30,177,187,1) 100%);
     background-image: url("../img/bg.webp");
     position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(4deg, rgba(113,165,122,0.5), rgba(30,177,187,0.7));
 }
 textarea:focus, input:focus{
     outline: none;
@@ -74,32 +77,47 @@ select {
     outline: 0;
     box-shadow: none
 }
-// h1,h2,h3,h4,h5,h6 {
-//     @include breakpoints(mobile) {
-//         text-align: center;
-//         font-size: 16px;
-//     }
-//     @include breakpoints(small) {
-//         text-align: center;
-//         font-size: 16px;
-//     }
-//     @include breakpoints(medium) {
-//         text-align: center;
-//         font-size: 15px;
-//     }
-//     @include breakpoints(large) {
-//         text-align: center;
-//         font-size: 16px;
-//     }
-//     @include breakpoints(extraLarge) {
-//         text-align: center;
-//         font-size: 16px;
-//     }
-//     @include breakpoints(extraLarge) {
-//         text-align: center;
-//         font-size: 16px;
-//     }
-// }
+
+
+.nav-mobile {
+    color: $white-color;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 25px;
+    @include transition;
+    display: none;
+    &:hover {
+        color: $main-color;
+    }
+    @include breakpoints(small) {
+        display: block;
+    }
+    @include breakpoints(mobile) {
+        display: block;
+    }
+    
+}
+.nav-close {
+    color: $white-color;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    font-size: 25px;
+    @include transition;
+    display: none;
+    &:hover {
+        color: $main-color;
+    }
+    @include breakpoints(small) {
+        display: block;
+    }
+    @include breakpoints(mobile) {
+        display: block;
+    }
+}
 
 .body-login {
     overflow: hidden;
@@ -107,9 +125,11 @@ select {
     height: 100vh;
     position: relative;
     padding-top: 40px;
-    // border-radius: 33% 0% 10% 55% / 39% 6% 0% 61%;
+    border-radius: 24% 0% 0% 13% / 26% 10% 10% 59% ;
+    // clip-path: polygon(46.5% 0%, 85% 0%, 100% 0%, 100% 100%, 85% 100%, 45.3% 100%, 30.9% 49.5%, 32.2% 33.8%);
     clip-path: polygon(39% 0, 100% 0, 100% 100%, 37% 100%, 0 26%);
     background-color: #fff;
+
     .form-login {
         height: 100vh;
         display: flex;
@@ -201,16 +221,17 @@ select {
             }
            
             .g-recaptcha {
-                width: 400px;
+                width: 400px !important;
                 margin: 20px 0 0;
             }
             .forget {
                 margin: 10px 0 0;
                 display: flex;
                 justify-content: space-between;
+                width: 400px;
                 input[type=checkbox] {
-                   width: 12px;
-                   height: 12px;
+                   width: 15px;
+                   height: 15px;
                   
                    @include breakpoints(small) {
                     font-size: 13px;
@@ -221,9 +242,8 @@ select {
                 }
                 .form-check {
                     position: relative;
-                    display: block;
-                    padding-left: 1.25rem;
-                    right: 30px;
+                    display: inline-block;
+                    right: 0;
                     font-size: 15px;
                     @include breakpoints(small) {
                         font-size: 12px;
@@ -247,6 +267,15 @@ select {
                     @include breakpoints(mobile) {
                         font-size: 12px;
                      }
+                }
+                @include breakpoints(medium) {
+                    width: 100%;
+                }
+                @include breakpoints(small) {
+                    width: 100%;
+                }
+                @include breakpoints(mobile) {
+                    width: 100%;
                 }
             }
         }
@@ -291,7 +320,7 @@ select {
                 font-size: 15px;
                 text-align: center;
                 line-height: 1.5;
-                height: 60px;
+               padding: 0 5px 0 0;
                 @include breakpoints(small) {
                     font-size: 14px;
                  }
@@ -468,12 +497,10 @@ select {
         height: 70px;
     }
     @include breakpoints(small) {
-        width: 120px;
-        height: 65px;
+        display: none;
     }
     @include breakpoints(mobile) {
-        width: 110px;
-        height: 60px;
+       display: none;
     }
 }
     // Start Home Page
@@ -543,24 +570,29 @@ select {
             display: flex;
             flex-direction: row;
             .logo {
-                display: none;
+                    display: none;
                     position: relative;
-                    top: -75px;
-                    right: -5px;
-                    width: 300px;
-                    height: 150px;
-                    background-color: #fff;
-                    border-radius: 4% 50% 0% 97%/17% 0% 0% 58%;
+                    top: 0;
+                    right: 0px;
+                    width: 150px;
+                    height: 70px;
+                    background-color: $white-color;
+                    border-radius: 15px;
                     text-align: center;
-                    transform: rotate(355deg);
-                    box-shadow: 4px -1px 8px 0px;
-
                     img {
-                        width: 220px;
-                        height: 120px;
+                        margin: 0 auto;
+                        width: 130;
+                        height: 140;
                         object-fit: contain;
                     }
-
+                    @include breakpoints(small) {
+                        display: flex;
+                        align-items: center;
+                    }
+                    @include breakpoints(mobile) {
+                        display: flex;
+                        align-items: center;
+                    }
             }
             .ul-nav {
                 display: flex;
@@ -568,9 +600,14 @@ select {
                 justify-content: center;
                 margin: 0 auto;
                 li {
+                    display: flex;
                     padding: 0 15px;
-                    @include breakpoints(medium) {
-                        padding: 0 7px;
+
+                    @include breakpoints(small) {
+                        padding: 10px 7px;
+                    }
+                    @include breakpoints(mobile) {
+                        padding: 10px 7px;
                     }
                     a {
                         color: $white-color;
@@ -579,10 +616,29 @@ select {
                         &:hover {
                             color: $main-color;
                         }
+                        @include breakpoints(medium) {
+                            font-size: 12px;
+                        }
                         @include breakpoints(mobile) {
                             font-size: 12px;
                         }
                     }
+                }
+                @include breakpoints(small){
+                    display: flex;
+                    list-style: none;
+                    justify-content: flex-start;
+                    margin: 0 auto;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                @include breakpoints(mobile){
+                    display: flex;
+                    list-style: none;
+                    justify-content: flex-start;
+                    margin: 0 auto;
+                    flex-direction: column;
+                    align-items: flex-start;
                 }
             }
             .attachment {
@@ -604,13 +660,38 @@ select {
                     }
                 }
                 @include breakpoints(small) {
-                    margin: 10px auto;
-                    font-size: 12px;
+                    // margin: 10px auto;
+                    // font-size: 12px;
+                    display: none;
                 }
                 @include breakpoints(mobile) {
-                    margin: 10px auto;
-                    font-size: 12px;
+                    // margin: 10px auto;
+                    // font-size: 12px;
+                    display: none;
                 }
+            }
+
+            @include breakpoints(small) {
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                height: 100vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                padding: 30px 0 0;
+                display: none;
+            }
+            @include breakpoints(mobile) {
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                height: 100vh;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                padding: 30px 0 0;
+                display: none;
             }
         }
         // End Navbar
@@ -618,6 +699,7 @@ select {
             display: flex;
             // height: 50vh;
             align-items: center;
+            margin-top: 50px;
 
             .import {
                 -webkit-box-shadow: 1px 3.5px 8px -1px $gray-color;
@@ -766,6 +848,21 @@ select {
         height: 35px;
         border: 1px solid $gray-color;
         border-radius: 50px;
+
+        @include breakpoints(large){
+            width: 260px;
+        }
+        @include breakpoints(medium){
+            width: 50%;
+        }
+        @include breakpoints(small){
+            width: 48%;
+            margin: 10px 0;
+        }
+        @include breakpoints(mobile){
+            width: 100%;
+            margin: 10px 0;
+        }
     }
     select {
         width: 250px;
@@ -777,11 +874,28 @@ select {
         &:focus {
             border: 1px solid $gray-color;
         }
+        @include breakpoints(small){
+            width: 48%;
+            margin: 10px 0;
+        }
+        @include breakpoints(mobile){
+            width: 48%;
+            margin: 10px 0;
+        }
     }
 
     #date {
         width: 200px;
         cursor: pointer;
+       
+        @include breakpoints(small){
+            width: 48%;
+            margin: 10px 0;
+        }
+        @include breakpoints(mobile){
+            width: 48%;
+            margin: 10px 0;
+        }
     }
     .btn {
         padding: 5px 30px;
@@ -805,6 +919,18 @@ select {
             border-color: transparent;
             box-shadow: none;
         }
+        @include breakpoints(small){
+            padding: 12px 25px;
+            line-height: 5px;
+            font-size: 12px;
+            margin: 0 auto;
+        }
+        @include breakpoints(mobile){
+            padding: 12px 25px;
+            line-height: 5px;
+            font-size: 12px;
+            margin: 0 auto;
+        }
     }
     input[type="date"]::-webkit-calendar-picker-indicator {
         color: rgba(0, 0, 0, 0);
@@ -817,21 +943,30 @@ select {
         cursor: pointer;
     }
 
-    input[type=date]::-webkit-datetime-edit-text {
+    // input[type=date]::-webkit-datetime-edit-text {
      
-        display: none;
-    }
-    input[type=date]::-webkit-datetime-edit-month-field{
+    //     display: none;
+    // }
+    // input[type=date]::-webkit-datetime-edit-month-field{
       
-        display: none;
-    }
-    input[type=date]::-webkit-datetime-edit-day-field {
+    //     display: none;
+    // }
+    // input[type=date]::-webkit-datetime-edit-day-field {
       
-        display: none;
-    }
-    input[type=date]::-webkit-datetime-edit-year-field {
+    //     display: none;
+    // }
+    // input[type=date]::-webkit-datetime-edit-year-field {
       
-        display: none;
+    //     display: none;
+    // }
+    @include breakpoints(medium){
+        flex-wrap: nowrap;
+    }
+    @include breakpoints(small){
+        flex-wrap: wrap;
+    }
+    @include breakpoints(mobile){
+        flex-wrap: wrap;
     }
 }
 .content-fillter {
@@ -848,7 +983,7 @@ select {
             border-radius: 5px;
             position: relative;
             color: rgb(85, 85, 85);
-           
+        
             ul {
                 display: flex;
                 justify-content: space-between;
@@ -1228,7 +1363,7 @@ select {
         align-items: center;
         position: relative;
         margin: 0 5px;
-       
+    
         &::after {
             content: '';
             position: absolute;
@@ -1246,7 +1381,7 @@ select {
             display: inline-block;
             margin: 0;
             padding: 5px;
-           
+        
         }
         .close {
             color: $gray-color;
@@ -1292,6 +1427,14 @@ select {
                 padding: 3px 30px;
                 color: $white-color;
                 font-size: 15px;
+                @include breakpoints(small) {
+                    padding: 10px 20px;
+                    font-size: 10px;
+                }
+                @include breakpoints(mobile) {
+                    padding: 10px 20px;
+                    font-size: 10px;
+                }
                }
 
                .active {
@@ -1334,6 +1477,12 @@ select {
                     &:focus {
                         border: 1px solid $main-color;
                     }
+                    @include breakpoints(small) {
+                        padding: 5px;
+                    }
+                    @include breakpoints(mobile) {
+                        padding: 5px;
+                    }
                 }
                 .input-text {
                     position: relative;
@@ -1352,6 +1501,13 @@ select {
                     border-radius: 50%;
                     line-height: 30px;
                     text-align: center;
+
+                    @include breakpoints(small) {
+                        top: 3px;
+                    }
+                    @include breakpoints(mobile) {
+                        top: 3px;
+                    }
                 }
             }
             textarea {
@@ -1364,6 +1520,13 @@ select {
                 padding: 15px;
                 &:focus {
                     border: 1px solid $main-color;
+                }
+
+                @include breakpoints(small) {
+                    height: 110px;
+                }
+                @include breakpoints(mobile) {
+                    height: 100px;
                 }
               }
 
@@ -1407,6 +1570,13 @@ select {
                 height: 100%;
                 width: 2px;
                 background: rgba($gray-color, 0.8);
+
+                @include breakpoints(small) {
+                    display: none;
+                }
+                @include breakpoints(mobile) {
+                    display: none;
+                }
             }
         }
         textarea {
@@ -1523,6 +1693,12 @@ select {
         margin: 20px 0;
         display: flex;
         justify-content: flex-end;
+        @include breakpoints(small) {
+            justify-content: center;
+        }
+        @include breakpoints(mobile) {
+            justify-content: center;
+        }
     }
     .bttn-send {
         color: $white-color;
@@ -1535,6 +1711,18 @@ select {
         .icon {
             padding: 0 30px 0 0px;
             color: #bdbdbd;
+            @include breakpoints(small) {
+                padding: 0 25px 0 0px;
+            }
+            @include breakpoints(mobile) {
+                padding: 0 20px 0 0px;
+            }
+        }
+        @include breakpoints(small) {
+            padding: 6px 17px;
+        }
+        @include breakpoints(mobile) {
+            padding: 5px 16px;
         }
     }
     .modal-footer {
@@ -1546,3 +1734,92 @@ select {
         }
     }
 }
+
+
+.checkbox {
+    --border-default: #bbbbc1;
+    --border-hover: #9898a3;
+    --active: #ca974b;
+    --active-tick: #ffffff;
+    display: flex;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .fill {
+    border: 1px solid orange;
+  }
+  .checkbox svg {
+    display: block;
+    position: absolute;
+  }
+  .checkbox input {
+    display: block;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 36%/36%;
+    // box-shadow: inset 0 0 0 1.5px var(--border, var(--border-default));
+    background: orange;
+    transition: orange 0.25s linear, box-shadow 0.25s linear;
+  }
+  .checkbox input + svg {
+    width: 21px;
+    height: 18px;
+    left: 0;
+    top: 0;
+    color: orange;
+  }
+  .checkbox input + svg .tick {
+    stroke-dasharray: 20;
+    stroke-dashoffset: var(--stroke-dashoffset, 20);
+    transition: stroke-dashoffset 0.2s;
+  }
+  .checkbox input + svg .tick.mask {
+    stroke: var(--active-tick);
+  }
+  .checkbox input + svg + svg {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: var(--active);
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    top: -6px;
+    right: -10px;
+    stroke-dasharray: 4.5px;
+    stroke-dashoffset: 13.5px;
+    pointer-events: none;
+    -webkit-animation: var(--animation, none) 0.2s ease 0.175s;
+            animation: var(--animation, none) 0.2s ease 0.175s;
+  }
+  .checkbox input:checked {
+    --background: transparent;
+    --border: var(--active);
+  }
+  .checkbox input:checked + svg {
+    --stroke-dashoffset: 0;
+  }
+  .checkbox input:checked + svg + svg {
+    --animation: check;
+  }
+  .checkbox:hover input:not(:checked) {
+    --border: var(--border-hover);
+  }
+  
+  @-webkit-keyframes check {
+    100% {
+      stroke-dashoffset: 4.5px;
+    }
+  }
+  
+  @keyframes check {
+    100% {
+      stroke-dashoffset: 4.5px;
+    }
+  }
