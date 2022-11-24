@@ -260,6 +260,31 @@ select:focus {
 .body-login .form-login form .g-recaptcha {
   width: 400px !important;
   margin: 20px 0 0;
+  border: none;
+}
+.body-login .form-login form iframe {
+  width: 400px !important;
+  background: #f9f9f9;
+  border: 1px solid #bdbdbd;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .body-login .form-login form iframe {
+    width: 100% !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .body-login .form-login form iframe {
+    width: 100% !important;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .body-login .form-login form iframe {
+    width: 100% !important;
+  }
+}
+.body-login .form-login form .rc-anchor-light.rc-anchor-normal {
+  border: 1px solid transparent;
+  box-shadow: none !important;
 }
 .body-login .form-login form .forget {
   margin: 10px 0 0;
@@ -368,6 +393,23 @@ select:focus {
   .body-login .form-login .btn-login {
     width: 230px;
     margin: 10px auto 0;
+  }
+}
+.body-login .form-login .p {
+  color: #000;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 20px;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .body-login .form-login .p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .body-login .form-login .p {
+    font-size: 13px;
   }
 }
 .body-login .form-login span {
@@ -912,6 +954,10 @@ select:focus {
   color: #fff;
 }
 
+.pressed ul {
+  list-style: none !important;
+}
+
 .tool-items {
   max-width: 450px;
   max-height: 350px;
@@ -1391,7 +1437,7 @@ select:focus {
   padding: 0 40px;
 }
 .person-content .info-icon {
-  display: inline-block;
+  display: block;
   cursor: pointer;
 }
 
