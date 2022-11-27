@@ -277,10 +277,8 @@
 }
  */
 
- .hidden {
-  display: none;
-}
 
+/* 
 .tool-container .arrow {
   width: 0;
   height: 0;
@@ -296,7 +294,7 @@
 }
 .tool-container.tool-bottom .arrow {
   border-color: transparent transparent #fff;
-  left: 50%;
+  left: 73%;
   top: -14px;
   margin-left: -7px;
 }
@@ -487,4 +485,4 @@
 }
 .toolbar-dark.tool-right .arrow {
   border-color: transparent white transparent transparent;
-}
+} */

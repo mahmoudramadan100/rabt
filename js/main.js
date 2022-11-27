@@ -23,7 +23,7 @@
   });
   $('.info-icon').toolbar({
     content: '#info',
-      position: 'right',
+    position: 'right',
   });
   // $('.icon').toolbar({
   //   content: '#icon',
@@ -58,4 +58,10 @@ $(document).ready(()=>{
         $('body').css("overflow",isMenuAlreadyOpen?"auto":"hidden")
         isMenuAlreadyOpen = !isMenuAlreadyOpen
   })
+});
+
+
+
+$(document).ready(function(){
+  $(".icon").tooltip();
 });
