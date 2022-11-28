@@ -2270,32 +2270,6 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
   background-image: url("../img/check-mark.png");
 }
 
-.up-navbar .logout {
-  padding: 5px;
-  background: #588464;
-  color: #fff;
-  text-align: center;
-  position: absolute;
-  bottom: -35px;
-  left: 2px;
-  z-index: 9;
-  border-radius: 5px;
-  font-size: 10px;
-}
-.up-navbar .logout::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #588464;
-  position: absolute;
-  top: -5px;
-  left: 13px;
-  transform: rotate(45deg);
-}
-.up-navbar .login:hover .logout {
-  display: block;
-}
-
 :root {
   /* basic color palette */
   --white-1: hsl(0, 0%, 100%);
@@ -2440,6 +2414,7 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
 }
 .dropdown-menu-up .ul-box .more {
   color: #66bbcd !important;
+  padding: 2px 0;
 }
 .dropdown-menu-up .ul-box .more a {
   color: #66bbcd;
