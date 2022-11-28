@@ -277,8 +277,13 @@ select {
 
             .g-recaptcha {
                 width: 400px !important;
-                margin: 20px 0 0;
+                overflow: hidden;
+                margin: 20px 15px;
                 border: none;
+                height: 70px;
+                background-color: #fff;
+                border: 1px solid $border-color;
+                border-radius: 6px;
                 @include breakpoints(medium) {
                     width: 380px !important;
                     margin: 20px 0 0;
@@ -287,20 +292,22 @@ select {
                     right: 12%;
                 }
                 @include breakpoints(small) {
-                    width: 300px !important;
-                    margin: 20px auto 0;
+                    width: 286px !important;
+                    margin: 20px 150px 0;
                     border: none;
                     position: relative;
                     right: 0;
                     left: 50%;
+                    overflow: hidden;
                 }
                 @include breakpoints(mobile) {
-                    width: 300px !important;
-                    margin: 20px auto 0;
+                    width: 286px !important;
+                    margin: 20px 150px 0;
                     border: none;
                     position: relative;
                     right: 0;
                     left: 50%;
+                    overflow: hidden;
                 }
             }
             iframe {
@@ -606,6 +613,7 @@ select {
             justify-content: center;
             align-content: center;
             flex-direction: column;
+            margin: 20px 0 0;
         }
         @include breakpoints(mobile) {
             width: 300px;
@@ -614,6 +622,7 @@ select {
             justify-content: center;
             align-content: center;
             flex-direction: column;
+            margin: 10px 0 0;
         }
     }
     @include breakpoints(small) {
@@ -651,7 +660,7 @@ select {
         right: 0;
         top: 20px;
         @include media-logo {
-            max-width: 140px;
+            max-width: 110px;
         }
         @include breakpoints(medium) {
             width: 100px;
@@ -683,7 +692,7 @@ select {
         rotate: 25deg;
     }
     @include media-logo {
-        width: 240px;
+        width: 180px;
     }
     @include breakpoints(small) {
         display: none;
