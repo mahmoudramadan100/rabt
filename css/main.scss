@@ -1442,11 +1442,20 @@ select {
                     color: $gray-color;
                     font-size: 14px;
                     font-weight: 300;
+                    @include breakpoints(mobile){
+                        font-size: 12px;
+                    }
+                }
+                @include breakpoints(mobile){
+                    font-size: 13px;
                 }
             }
             .icon {
                 display: inline-block;
                 color: $gray-color;
+            }
+            @include breakpoints(mobile){
+                font-size: 12px;
             }
         }
         &::after {
@@ -1470,6 +1479,9 @@ select {
                 color: $main-color;
                 font-size: 15px;
                 font-weight: bold;
+                @include breakpoints(mobile) {
+                    font-size: 13px;
+                }
             }
             p {
                 color: #000;
@@ -1511,6 +1523,10 @@ select {
     }
     .tab-content {
         border-right: 1px solid rgba($gray-color, 0.8);
+
+        @include breakpoints(mobile){
+            border-right: none;
+        }
     }
     .nav-tabs {
         padding: 10px 0;
@@ -1650,6 +1666,9 @@ select {
             box-shadow: 1px 3.5px 8px -1px #bdbdbd;
             font-size: 14px;
             text-align: center;
+            @include breakpoints(mobile) {
+                padding: 5px 20px;
+            }
         }
     }
 }

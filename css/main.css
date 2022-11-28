@@ -1641,9 +1641,24 @@ select:focus {
   font-size: 14px;
   font-weight: 300;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .title li a span {
+    font-size: 12px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .title li a {
+    font-size: 13px;
+  }
+}
 .person-content .title li .icon {
   display: inline-block;
   color: #cacaca;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .title li {
+    font-size: 12px;
+  }
 }
 .person-content .title::after {
   content: "";
@@ -1665,6 +1680,11 @@ select:focus {
   color: #66bbcd;
   font-size: 15px;
   font-weight: bold;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .content .subject h3 {
+    font-size: 13px;
+  }
 }
 .person-content .content .subject p {
   color: #000;
@@ -1702,6 +1722,11 @@ select:focus {
 }
 .person-content .tab-content {
   border-right: 1px solid rgba(202, 202, 202, 0.8);
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .tab-content {
+    border-right: none;
+  }
 }
 .person-content .nav-tabs {
   padding: 10px 0;
@@ -1836,6 +1861,11 @@ select:focus {
   box-shadow: 1px 3.5px 8px -1px #bdbdbd;
   font-size: 14px;
   text-align: center;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .btn-send li a {
+    padding: 5px 20px;
+  }
 }
 
 .footer-person {
