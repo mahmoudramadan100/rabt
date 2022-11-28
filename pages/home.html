@@ -46,23 +46,40 @@
                                     محمود ربيع محمد أحمد
                                 </a>
                             </li>
-                            <li>
+                            <li class="dropdown">
                                 <a href="#">
                                     <div class="icon unread">
                                         <i class="fa-solid fa-bell"></i>
                                     </div>
                                 </a>
+                                <div class="dropdown-menu-up">
+                                    <ul class="ul-box">
+                                        <li class="li-list">
+                                            <a href="#"> هناك العديم من الانواع المتوفره </a>
+                                        </li>
+                                        <li class="li-list">
+                                            <a href="#"> هناك العديم من الانواع المتوفره </a>
+                                        </li>
+                                        <li class="li-list">
+                                            <a href="#"> هناك العديم من الانواع المتوفره </a>
+                                        </li>
+                                        <li class="li-list">
+                                            <a href="#"> هناك العديم من الانواع المتوفره </a>
+                                        </li>
+                                        <li class="more">
+                                            <a href="#"> +99 المزيد</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <a href="../index.html">
-                                    <div class="icon login">
+                                    <div class="icon tooltip">
                                         <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
+                                        <div class="tooltip__content tooltip__content_bottom"> تسجيل الخروج </div>
                                     </div>
-                                </a>
+                                    </a>
                             </li>
-                            <span class="logout">
-                                تسجيل الخروج
-                             </span>
                         </ul>
                     </div>
                 </div>
@@ -216,8 +233,9 @@
                                     </label>
                                     <div class="input-text">
                                         <input type="text">
-                                        <div class="icon" data-toggle="modal" data-target="#icon">
+                                        <div class="icon tooltip" data-toggle="modal" data-target="#icon">
                                             <i class="fa-solid fa-plus"></i>
+                                            <div class="tooltip__content tooltip__content_top">اضافه اكثر من مستقبل </div>
                                         </div>
                                     </div>
                                     <label for="subject">
@@ -757,31 +775,10 @@
                 </div>
             </div>
         </div>
-        <!-- toolbar -->
-        <div id="toolbar-unread" class="hidden">
-            <a href="#">
-                هناك العديد من الانواع المتوفره
-            </a>
-            <a href="#">
-                هناك العديد من الانواع المتوفره
-            </a>
-            <a href="#">
-                هناك العديد من الانواع المتوفره
-            </a>
-            <a href="#">
-                هناك العديد من الانواع المتوفره
-            </a>
-            <a href="#">
-                هناك العديد من الانواع المتوفره
-            </a>
-            <a href="#">
-                هناك العديد من الانواع المتوفره
-            </a>
-            <a href="#" class="more">
-                المزيد +99
-            </a>
-        </div>
+      
+        <div class="dropdown">
 
+        </div>
 
         <script src="../js/jquery-1.8.3.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
