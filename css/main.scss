@@ -516,7 +516,7 @@ select {
         width: 70%;
     }
     @include breakpoints(medium) {
-        width: 78%;
+        width: 78% !important;
     }
     @include breakpoints(small) {
         width: 100%;
@@ -525,9 +525,9 @@ select {
         width: 100%;
     }
 
-    @include height {
-        width: 100%;
-    }
+    // @include height {
+    //     width: 100%;
+    // }
 }
 
 // Re-Code Page

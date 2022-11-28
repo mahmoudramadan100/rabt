@@ -619,7 +619,7 @@ select:focus {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .body-login {
-    width: 78%;
+    width: 78% !important;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -628,11 +628,6 @@ select:focus {
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .body-login {
-    width: 100%;
-  }
-}
-@media (min-height: 650px) and (max-width: 1200px) {
   .body-login {
     width: 100%;
   }
