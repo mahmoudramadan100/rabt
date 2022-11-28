@@ -1259,11 +1259,11 @@ select {
     }
     @include breakpoints(small) {
         flex-wrap: wrap;
-        padding: 0;
+        padding: 0 10px;
     }
     @include breakpoints(mobile) {
         flex-wrap: wrap;
-        padding: 0;
+        padding: 0 10px;
     }
 }
 .content-fillter {

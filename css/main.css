@@ -1451,13 +1451,13 @@ select:focus {
 @media (min-width: 576px) and (max-width: 767px) {
   .fillter {
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0 10px;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .fillter {
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0 10px;
   }
 }
 
