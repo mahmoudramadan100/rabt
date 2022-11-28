@@ -842,6 +842,7 @@ select:focus {
   list-style: none;
   margin: 0;
   text-align: left;
+  position: relative;
 }
 .home .up-navbar ul li {
   display: inline-block;
@@ -1003,7 +1004,7 @@ select:focus {
   font-size: 14px;
   padding: 10px 30px;
   border-radius: 5px;
-  background: rgba(88, 132, 100, 0.4);
+  background: rgba(88, 132, 100, 0.8);
   color: #fff;
   margin: 0 10px;
   border: 1px solid transparent;
@@ -1268,16 +1269,16 @@ select:focus {
   background: #fff;
   border-radius: 5px;
   border: 1px solid #cacaca;
-  box-shadow: -1px 1px 2px 0px #cacaca;
 }
 .tool-items a {
   display: block;
-  padding: 7px 5px;
-  color: #cacaca;
+  padding: 7px 20px;
+  color: #8c8c8c;
   border-bottom: 1px solid #f5f5f5;
   font-size: 13px;
   text-align: center;
   position: relative;
+  transition: 0.2s;
   transition: 0.2s;
 }
 .tool-items a:hover {
@@ -1289,6 +1290,16 @@ select:focus {
 }
 .tool-items ul {
   list-style: none;
+}
+.tool-items::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 43px;
+  width: 10px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  height: 10px;
 }
 
 .tool-container.tool-bottom .arrow {
@@ -1846,6 +1857,7 @@ select:focus {
 .modal {
   box-shadow: 1px 3.5px 8px -1px #cacaca;
   padding: 20px 10px;
+  /* Main Classes */
 }
 .modal .modal-header {
   display: flex;
@@ -2011,16 +2023,20 @@ select:focus {
 }
 .modal .modal-body .tab-content .form .icon::after {
   content: "اضافه اكثر من مستقبل";
-  position: relative;
-  top: 0;
-  right: 0;
-  max-width: 150px;
-  color: #000;
-  background-color: rgba(202, 202, 202, 0.3);
+  position: absolute;
+  top: -45px;
+  right: -46px;
+  color: #cacaca;
+  background-color: rgba(88, 132, 100, 0.8);
   border-radius: 5px;
   padding: 5px;
+  font-size: 11px;
+  overflow: auto;
+  width: 130px;
+  color: #fff;
+  font-size: 12px;
 }
-.modal .modal-body .tab-content textarea {
+.modal .modal-body .tab-content .form textarea {
   resize: none;
   width: 100%;
   height: 150px;
@@ -2029,26 +2045,26 @@ select:focus {
   transition: 0.2s;
   padding: 15px;
 }
-.modal .modal-body .tab-content textarea:focus {
+.modal .modal-body .tab-content .form textarea:focus {
   border: 1px solid #66bbcd;
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .modal .modal-body .tab-content textarea {
+  .modal .modal-body .tab-content .form textarea {
     height: 110px;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .modal .modal-body .tab-content textarea {
+  .modal .modal-body .tab-content .form textarea {
     height: 100px;
   }
 }
-.modal .modal-body .tab-content .add-link {
+.modal .modal-body .tab-content .form .add-link {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.modal .modal-body .tab-content .add-link::before {
+.modal .modal-body .tab-content .form .add-link::before {
   content: "";
   position: absolute;
   background-color: rgba(202, 202, 202, 0.8);
@@ -2057,7 +2073,7 @@ select:focus {
   right: 0;
   bottom: 45%;
 }
-.modal .modal-body .tab-content .add-link h3 {
+.modal .modal-body .tab-content .form .add-link h3 {
   text-align: center;
   padding: 10px;
   margin: 10px 0;
@@ -2067,14 +2083,14 @@ select:focus {
   font-weight: bold;
   color: #66bbcd;
 }
-.modal .export {
+.modal .modal-body .export {
   margin-left: 10px;
 }
-.modal .export .line {
+.modal .modal-body .export .line {
   position: relative;
   height: 100vh;
 }
-.modal .export .line::before {
+.modal .modal-body .export .line::before {
   content: "";
   position: absolute;
   right: 15px;
@@ -2083,36 +2099,36 @@ select:focus {
   background: rgba(202, 202, 202, 0.8);
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .modal .export .line::before {
+  .modal .modal-body .export .line::before {
     display: none;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .modal .export .line::before {
+  .modal .modal-body .export .line::before {
     display: none;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .modal .export .line {
+  .modal .modal-body .export .line {
     display: none;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .modal .export .line {
+  .modal .modal-body .export .line {
     display: none;
   }
 }
-.modal .export textarea {
+.modal .modal-body .export textarea {
   height: 80px !important;
   padding: 10px !important;
 }
-.modal .export input {
+.modal .modal-body .export input {
   padding: 5px !important;
 }
-.modal .export .icon {
+.modal .modal-body .export .icon {
   top: 3px !important;
 }
-.modal .export input#upload {
+.modal .modal-body .export input#upload {
   opacity: 0;
   margin: 0;
   padding: 0;
@@ -2125,19 +2141,19 @@ select:focus {
   right: 0;
   cursor: pointer;
 }
-.modal .export .upload {
+.modal .modal-body .export .upload {
   padding: 20px 0;
   border: 1px solid #cacaca;
   border-radius: 15px;
   position: relative;
 }
-.modal .export .upload label {
+.modal .modal-body .export .upload label {
   text-align: center;
   color: #66bbcd !important;
   font-size: 13px;
   margin-top: 15px;
 }
-.modal .export .upload .icon-upload {
+.modal .modal-body .export .upload .icon-upload {
   font-size: 17px;
   text-align: center;
   color: #fff;
@@ -2149,71 +2165,71 @@ select:focus {
   border: 1px solid rgba(189, 189, 189, 0.3);
   margin: 0 auto;
 }
-.modal .export .name-pro {
+.modal .modal-body .export .name-pro {
   padding-right: 15px;
   padding-bottom: 5px;
   position: relative;
   margin: 20px 15px 10px 0;
 }
-.modal .export .item .name {
+.modal .modal-body .export .item .name {
   display: flex;
   justify-content: space-between;
 }
-.modal .export .item .name h3 {
+.modal .modal-body .export .item .name h3 {
   display: inline-block;
   font-size: 13px;
   color: #000;
 }
-.modal .export .item .name .icon-close {
+.modal .modal-body .export .item .name .icon-close {
   color: rgba(202, 202, 202, 0.8);
   transition: 0.2s;
   font-size: 14px;
   padding: 0 5px;
   cursor: pointer;
 }
-.modal .export .item .name .icon-close .icons {
+.modal .modal-body .export .item .name .icon-close .icons {
   display: inline-block;
   padding: 0 3px;
   transition: 0.2s;
 }
-.modal .export .item .name .icon-close .icons:hover {
+.modal .modal-body .export .item .name .icon-close .icons:hover {
   color: #000;
   cursor: pointer;
 }
-.modal .export .item .link,
-.modal .export .item .progress {
+.modal .modal-body .export .item .link,
+.modal .modal-body .export .item .progress {
   margin-top: 2px;
   height: 5px;
 }
-.modal .export .item .link .progress-bar,
-.modal .export .item .progress .progress-bar {
+.modal .modal-body .export .item .link .progress-bar,
+.modal .modal-body .export .item .progress .progress-bar {
   background: #66bbcd;
 }
-.modal .export .item .link {
+.modal .modal-body .export .item .link {
   color: #cacaca;
   font-size: 13px;
   transition: 0.2s;
   cursor: pointer;
 }
-.modal .export .item .link:hover {
+.modal .modal-body .export .item .link:hover {
   color: #000;
 }
-.modal .button-send {
+.modal .modal-body .button-send {
   margin: 20px 0;
   display: flex;
   justify-content: flex-end;
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .modal .button-send {
+  .modal .modal-body .button-send {
     justify-content: center;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .modal .button-send {
+  .modal .modal-body .button-send {
     justify-content: center;
   }
 }
-.modal .bttn-send {
+.modal .modal-body .bttn-send {
   color: #fff;
   text-align: center;
   padding: 8px 20px;
@@ -2222,57 +2238,52 @@ select:focus {
   position: relative;
   left: 0;
 }
-.modal .bttn-send .icon {
+.modal .modal-body .bttn-send .icon {
   padding: 0 30px 0 0;
   color: #bdbdbd;
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .modal .bttn-send .icon {
+  .modal .modal-body .bttn-send .icon {
     padding: 0 25px 0 0;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .modal .bttn-send .icon {
+  .modal .modal-body .bttn-send .icon {
     padding: 0 20px 0 0;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .modal .bttn-send {
+  .modal .modal-body .bttn-send {
     padding: 6px 17px;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .modal .bttn-send {
+  .modal .modal-body .bttn-send {
     padding: 5px 16px;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .modal .modal-footer {
+  .modal .modal-body .modal-footer {
     justify-content: center;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
-  .modal .modal-footer {
+  .modal .modal-body .modal-footer {
     justify-content: center;
   }
 }
-
-.show-one {
+.modal .show-one {
   z-index: 9999;
 }
-
-.choose-person {
-  /* Main Classes */
-}
-.choose-person .choose {
+.modal .choose-person .choose {
   margin: 15px 0;
 }
-.choose-person .choose span {
+.modal .choose-person .choose span {
   font-size: 13px;
-  color: #cacaca;
+  color: #8c8c8c;
   padding-right: 10px;
 }
-.choose-person input[type=checkbox]:before {
+.modal input[type=checkbox]:before {
   position: relative;
   display: block;
   width: 15px;
@@ -2281,7 +2292,7 @@ select:focus {
   background: #FFF;
   cursor: pointer;
 }
-.choose-person input[type=checkbox]:after {
+.modal input[type=checkbox]:after {
   content: "";
   position: relative;
   display: block;
@@ -2297,9 +2308,35 @@ select:focus {
   border-radius: 3px;
   cursor: pointer;
 }
-.choose-person input[type=checkbox]:checked:after {
+.modal input[type=checkbox]:checked:after {
   background-image: url("../img/check-mark.png");
 }
-.choose-person input[type=checkbox]:not(:disabled):checked:hover:after {
+.modal input[type=checkbox]:not(:disabled):checked:hover:after {
   background-image: url("../img/check-mark.png");
+}
+
+.up-navbar .logout {
+  padding: 5px;
+  background: #588464;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: -35px;
+  left: 2px;
+  z-index: 9;
+  border-radius: 5px;
+  font-size: 10px;
+}
+.up-navbar .logout::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #588464;
+  position: absolute;
+  top: -5px;
+  left: 13px;
+  transform: rotate(45deg);
+}
+.up-navbar .login:hover .logout {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

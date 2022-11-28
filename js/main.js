@@ -8,10 +8,11 @@
       event: 'click',
     hideOnClick: true
   });
-  $('.login').toolbar({
-    content: '#login',
-      position: 'bottom'
-  });
+
+  // $('.login').toolbar({
+  //   content: '#login',
+  //     position: 'bottom'
+  // });
 
   $('.link').toolbar({
     content: '#link',
@@ -21,10 +22,10 @@
     content: '#share',
       position: 'bottom'
   });
-  $('.info-icon').toolbar({
-    content: '#info',
-    position: 'right',
-  });
+  // $('.info-icon').toolbar({
+  //   content: '#info',
+  //   position: 'right',
+  // });
   // $('.icon').toolbar({
   //   content: '#icon',
   //     position: 'top'
@@ -62,6 +63,11 @@ $(document).ready(()=>{
 
 
 
-$(document).ready(function(){
-  $(".icon").tooltip();
-});
+
+// $(function() {     
+//   $('.login').on('hover',function() {
+//      $(".logout").css(
+//       'display', 'block'
+//      );
+//   });
+// });
