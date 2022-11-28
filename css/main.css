@@ -2372,7 +2372,7 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
 }
 .tooltip__content_bottom {
   transform: translateY(120%);
-  right: -33px;
+  right: -25px;
 }
 .tooltip__content_bottom::before {
   left: 50%;
