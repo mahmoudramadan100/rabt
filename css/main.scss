@@ -525,9 +525,9 @@ select {
         width: 100%;
     }
 
-    // @include height {
-    //     width: 100%;
-    // }
+    @include height {
+        width: 100%;
+    }
 }
 
 // Re-Code Page
