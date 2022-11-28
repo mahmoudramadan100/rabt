@@ -1762,14 +1762,23 @@ select:focus {
   margin: 0;
 }
 .person-content .nav-tabs li a {
-  color: #66bbcd;
+  color: #cacaca;
   font-size: 15px;
   width: 100%;
   display: inline-block;
   padding-bottom: 20px;
 }
+.person-content .nav-tabs li a span {
+  background-color: #eaeaea;
+  color: #cbcbcb;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: bold;
+}
 .person-content .nav-tabs li .active {
   position: relative;
+  color: #66bbcd;
   transition: 0.2s;
 }
 .person-content .nav-tabs li .active::after {

@@ -1552,15 +1552,25 @@ select {
             text-align: center;
             margin: 0;
             a {
-                color: $main-color;
+                color: $gray-color;
                 font-size: 15px;
                 width: 100%;
                 display: inline-block;
                 padding-bottom: 20px;
+
+                span {
+                    background-color: #eaeaea;
+                    color: #cbcbcb;
+                    padding: 3px 5px;
+                    border-radius: 5px;
+                    font-size: 9px;
+                    font-weight: bold;
+                }
             }
 
             .active {
                 position: relative;
+                color: $main-color;
                 @include transition;
                 &::after {
                     content: '';
