@@ -1380,6 +1380,16 @@ select:focus {
   width: 100%;
   color: #cacaca;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .fillter #date::after {
+    left: 35%;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .fillter #date::after {
+    left: 33%;
+  }
+}
 .fillter .btn {
   padding: 5px 30px;
   color: #fff;
@@ -1514,11 +1524,21 @@ select:focus {
   font-weight: bold;
   padding: 5px 0;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .content-fillter .content .body h2 {
+    font-size: 13px;
+  }
+}
 .content-fillter .content .body p {
   color: #cacaca;
   font-size: 13px;
   line-height: 1.5;
   margin: 0;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .content-fillter .content .body p {
+    font-size: 12px;
+  }
 }
 .content-fillter .content .body .icon {
   color: #cacaca;

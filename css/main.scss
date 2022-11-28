@@ -1186,6 +1186,12 @@ select {
             left: 44%;
             width: 100%;
             color: $gray-color;
+            @include breakpoints(medium) {
+                left: 35%;
+            }
+            @include breakpoints(mobile) {
+                left: 33%;
+            }
             
         }
     }
@@ -1317,12 +1323,18 @@ select {
                 color: $main-color;
                 font-weight: bold;
                 padding: 5px 0;
+                @include breakpoints(mobile) {
+                    font-size: 13px;
+                }
             }
             p {
                 color: $gray-color;
                 font-size: 13px;
                 line-height: 1.5;
                 margin: 0;
+                @include breakpoints(mobile) {
+                    font-size: 12px;
+                }
             }
             .icon {
                 color: $gray-color;
