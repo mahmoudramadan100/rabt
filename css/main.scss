@@ -2121,7 +2121,7 @@ input[type="checkbox"]:before {
 .tooltip {
     --tooltip__content_bd-cr: var(--black-1a);
     
-    cursor: help;
+    cursor: pointer;
     color:   $gray-color;
     display: grid;
     place: {
