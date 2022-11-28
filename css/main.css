@@ -2418,6 +2418,7 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
 }
 .dropdown-menu-up .ul-box .more a {
   color: #66bbcd;
+  font-weight: bold;
 }
 .dropdown-menu-up::after {
   content: "";
