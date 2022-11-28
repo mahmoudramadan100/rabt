@@ -1567,6 +1567,11 @@ select:focus {
   font-size: 11px;
   color: #cacaca;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .Pagination select {
+    width: 50px;
+  }
+}
 .Pagination .arrow {
   padding: 0 10px;
   display: inline-block;
@@ -1596,6 +1601,16 @@ select:focus {
 .Pagination .arrow .left-icon:hover {
   background: rgb(113, 165, 122);
   background: linear-gradient(90deg, rgb(108, 166, 126) 0%, rgb(40, 175, 178) 100%);
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .Pagination {
+    margin: 20px 5px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .Pagination {
+    margin: 20px 5px;
+  }
 }
 
 .person-content {

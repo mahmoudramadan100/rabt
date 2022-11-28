@@ -1373,6 +1373,9 @@ select {
         display: inline-block;
         font-size: 11px;
         color: #cacaca;
+        @include breakpoints(mobile) {
+            width: 50px;
+        }
     }
     .arrow {
         padding: 0 10px;
@@ -1405,14 +1408,12 @@ select {
             }
         }
     }
-    // input[type="number"]::-webkit-outer-spin-button,
-    // input[type="number"]::-webkit-inner-spin-button {
-    // -webkit-appearance: none;
-    // margin: 0;
-    // }
-    // input[type="number"] {
-    // -moz-appearance: textfield;
-    // }
+    @include breakpoints(small) {
+        margin: 20px 5px;
+    }
+    @include breakpoints(mobile) {
+        margin: 20px 5px;
+    }
 }
 
 // End Fillter page
