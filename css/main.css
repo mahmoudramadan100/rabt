@@ -1858,7 +1858,7 @@ select:focus {
 .person-content .info-icon {
   display: flex;
   cursor: pointer;
-  color: #000;
+  color: #6f6f6f;
 }
 
 .btn-send {
