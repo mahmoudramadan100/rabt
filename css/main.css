@@ -34,6 +34,10 @@ textarea:focus {
   outline: none;
 }
 
+label {
+  margin-bottom: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -835,7 +839,7 @@ select:focus {
   background-color: transparent;
 }
 .home .up-navbar {
-  background: url("../img/bg.webp") no-repeat left top, linear-gradient(206deg, #074b50, #1a4943);
+  background: url(../img/bg.webp) no-repeat left top, linear-gradient(206deg, #0e4c51, #304634);
   padding: 5px 0;
 }
 .home .up-navbar ul {
@@ -1002,7 +1006,7 @@ select:focus {
 }
 .home .navbar .attachment {
   font-size: 14px;
-  padding: 10px 30px;
+  padding: 8px 30px;
   border-radius: 5px;
   background: rgba(88, 132, 100, 0.8);
   color: #fff;
@@ -1302,19 +1306,13 @@ select:focus {
   height: 10px;
 }
 
-.tool-container.tool-bottom .arrow {
-  border-color: transparent transparent #fff;
-  left: 73% !important;
-  top: -14px;
-  margin-left: -7px;
-}
-
 .fillter {
-  padding: 5px 10px 15px;
+  padding: 15px 10px;
   margin: 5px 10px;
   display: flex;
-  box-shadow: 1px 3.5px 8px -1px #bdbdbd;
+  box-shadow: 2px 1.5px 5px 0px #bdbdbd;
   justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .fillter input {
   font-size: 13px;
@@ -1362,6 +1360,7 @@ select:focus {
   border: 1px solid #66bbcd;
 }
 .fillter select {
+  font-size: 13px;
   width: 250px;
   height: 35px;
   border: 1px solid #cacaca;
@@ -1378,12 +1377,14 @@ select:focus {
   .fillter select {
     width: 48%;
     margin: 10px 0;
+    height: 35px !important;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .fillter select {
     width: 48%;
     margin: 10px 0;
+    height: 35px !important;
   }
 }
 .fillter #date {
@@ -1653,6 +1654,7 @@ select:focus {
 .person-content .title li a span {
   color: #cacaca;
   font-size: 14px;
+  font-weight: 300;
 }
 .person-content .title li .icon {
   display: inline-block;
@@ -1857,7 +1859,6 @@ select:focus {
 .modal {
   box-shadow: 1px 3.5px 8px -1px #cacaca;
   padding: 20px 10px;
-  /* Main Classes */
 }
 .modal .modal-header {
   display: flex;
@@ -2272,18 +2273,22 @@ select:focus {
     justify-content: center;
   }
 }
-.modal .show-one {
+
+.show-one {
   z-index: 9999;
 }
-.modal .choose-person .choose {
+
+.choose-person .choose {
   margin: 15px 0;
 }
-.modal .choose-person .choose span {
+.choose-person .choose span {
   font-size: 13px;
   color: #8c8c8c;
   padding-right: 10px;
 }
-.modal input[type=checkbox]:before {
+
+/* Main Classes */
+input[type=checkbox]:before {
   position: relative;
   display: block;
   width: 15px;
@@ -2292,7 +2297,8 @@ select:focus {
   background: #FFF;
   cursor: pointer;
 }
-.modal input[type=checkbox]:after {
+
+input[type=checkbox]:after {
   content: "";
   position: relative;
   display: block;
@@ -2308,10 +2314,12 @@ select:focus {
   border-radius: 3px;
   cursor: pointer;
 }
-.modal input[type=checkbox]:checked:after {
+
+input[type=checkbox]:checked:after {
   background-image: url("../img/check-mark.png");
 }
-.modal input[type=checkbox]:not(:disabled):checked:hover:after {
+
+input[type=checkbox]:not(:disabled):checked:hover:after {
   background-image: url("../img/check-mark.png");
 }
 

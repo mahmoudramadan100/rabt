@@ -47,7 +47,9 @@ input:focus,
 textarea:focus {
     outline: none;
 }
-
+label {
+    margin-bottom: 0;
+}
 ul {
     list-style: none;
 }
@@ -702,7 +704,7 @@ select {
     // overflow: hidden;
     background-color: transparent;
     .up-navbar {
-        background: url("../img/bg.webp") no-repeat left top, linear-gradient(206deg,#074b50, #1a4943);
+        background: url(../img/bg.webp) no-repeat left top, linear-gradient(206deg, #0e4c51, #304634);
         padding: 5px 0;
         ul {
             list-style: none;
@@ -849,7 +851,7 @@ select {
         }
         .attachment {
             font-size: 14px;
-            padding: 10px 30px;
+            padding: 8px 30px;
             border-radius: 5px;
             background: rgba($icon-color, 0.8);
             color: $white-color;
@@ -1140,20 +1142,16 @@ select {
         height: 10px;
     }
 }
-.tool-container.tool-bottom .arrow {
-    border-color: transparent transparent #fff;
-    left: 73% !important;
-    top: -14px;
-    margin-left: -7px;
-}
+
 // Start FillTer Page
 
 .fillter {
-    padding: 5px 10px 15px;
+    padding: 15px 10px;
     margin: 5px 10px;
     display: flex;
-    box-shadow: 1px 3.5px 8px -1px #bdbdbd;
+    box-shadow: 2px 1.5px 5px 0px #bdbdbd;
     justify-content: space-between;
+    background-color: rgba($white-color , 0.8);
     input {
         font-size: 13px;
         margin: 0 5px;
@@ -1187,6 +1185,7 @@ select {
         }
     }
     select {
+        font-size: 13px;
         width: 250px;
         height: 35px;
         border: 1px solid $gray-color;
@@ -1201,10 +1200,12 @@ select {
         @include breakpoints(small) {
             width: 48%;
             margin: 10px 0;
+            height: 35px !important;
         }
         @include breakpoints(mobile) {
             width: 48%;
             margin: 10px 0;
+            height: 35px !important;
         }
     }
 
@@ -1480,6 +1481,7 @@ select {
                 span {
                     color: $gray-color;
                     font-size: 14px;
+                    font-weight: 300;
                 }
             }
             .icon {
@@ -1583,21 +1585,6 @@ select {
                     background: $linear-color;
                 }
             }
-            //     .show {
-            //     background: $background-color;
-            //     background: $linear-color;
-            //     color: $white-color;
-            //     }
-            // &::after {
-            //     content: '';
-            //     position: absolute;
-            //     width: 100%;
-            //     height: 3px;
-            //     bottom: 0;
-            //     right: 0;
-            //     background: $background-color;
-            //     background: $linear-color;
-            // }
         }
     }
     .box {
@@ -2111,7 +2098,7 @@ select {
         }
     }
 }
-
+}
 .show-one {
     z-index: 9999;
 }
@@ -2125,6 +2112,7 @@ select {
             color: #8c8c8c;
             padding-right: 10px;
         }
+    
     }
 }
 
@@ -2164,7 +2152,7 @@ input[type="checkbox"]:before {
   input[type="checkbox"]:not(:disabled):checked:hover:after {
     background-image: url('../img/check-mark.png');
   }
-}
+
 
 
 
