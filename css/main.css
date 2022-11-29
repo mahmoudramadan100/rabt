@@ -2411,11 +2411,6 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
   --black-1: hsl(0, 0%, 0%);
   --black-2: hsl(0, 0%, 20%);
   --blue-1: hsl(200, 50%, 50%);
-  /* fonts */
-  --ft-fy-fallback-1: sans-serif;
-  --ft-fy-1: "Poppins", var(--ft-fy-fallback-1);
-  --ft-se-300: 0.9rem;
-  --ft-se-400: 1.05rem;
   /* spaces */
   --space-300: 1em;
   --space-350: 1.7em;
@@ -2431,7 +2426,7 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
 }
 
 .tooltip {
-  --tooltip__content_bd-cr: var(--black-1a);
+  --tooltip__content_bd-cr: $black-color;
   cursor: pointer;
   color: #cacaca;
   display: grid;
