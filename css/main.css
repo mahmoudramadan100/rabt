@@ -429,7 +429,7 @@ select:focus {
 }
 .body-login .form-login form .forget a {
   transition: 0.2s;
-  color: #33a5bc;
+  color: #66bbcd;
   text-decoration: none;
   font-size: 13px;
   position: relative;
