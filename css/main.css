@@ -20,7 +20,7 @@ body {
 
 .bg-color {
   width: 100%;
-  background: url("../img/bg.webp") no-repeat left top, linear-gradient(206deg, #074b50, #1a4943);
+  background: url("../img/bg.webp") repeat left top, linear-gradient(206deg, #074b50, #1a4943);
   position: relative;
   overflow: hidden;
 }
@@ -134,7 +134,7 @@ select:focus {
   height: 75vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .body-login .content {
@@ -787,7 +787,7 @@ select:focus {
   .logo img {
     width: 100px;
     height: 60px;
-    rotate: -25deg;
+    rotate: -18deg;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -815,7 +815,7 @@ select:focus {
     align-items: center;
     justify-content: center;
     box-shadow: 1px 3.5px 8px -1px #6a6a6a;
-    rotate: 25deg;
+    rotate: 18deg;
   }
 }
 @media (min-width: 992px) and (max-width: 1300px) {
@@ -904,7 +904,7 @@ select:focus {
   padding: 15px;
 }
 .home .navbar {
-  padding: 20px 0;
+  padding: 15px 0;
   margin-bottom: 20px;
   background: rgb(113, 165, 122);
   background: linear-gradient(90deg, rgb(108, 166, 126) 0%, rgb(40, 175, 178) 100%);
@@ -1062,7 +1062,8 @@ select:focus {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .home .navbar .attachment {
-    display: none;
+    margin: 10px auto;
+    font-size: 12px;
   }
 }
 .home .navbar .attachment:hover {

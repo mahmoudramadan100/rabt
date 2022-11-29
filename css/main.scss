@@ -34,7 +34,7 @@ body {
 }
 .bg-color {
     width: 100%;
-    background: url("../img/bg.webp") no-repeat left top, linear-gradient(206deg,#074b50, #1a4943);
+    background: url("../img/bg.webp") repeat left top, linear-gradient(206deg,#074b50, #1a4943);
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= "#71a57a",endColorstr="#1db1bb",GradientType=1));
     position: relative;
     overflow: hidden;
@@ -661,7 +661,7 @@ select {
         @include breakpoints(medium) {
             width: 100px;
             height: 60px;
-            rotate: -25deg;
+            rotate: -18deg;
         }
         @include breakpoints(small) {
             width: 95px;
@@ -685,8 +685,9 @@ select {
         align-items: center;
         justify-content: center;
         box-shadow: 1px 3.5px 8px -1px #6a6a6a;
-        rotate: 25deg;
+        rotate: 18deg;
     }
+   
     @include media-logo {
         width: 240px;
     }
@@ -773,7 +774,7 @@ select {
     }
 
     .navbar {
-        padding: 20px 0;
+        padding: 15px 0;
         margin-bottom: 20px;
         background: $background-color;
         background: $linear-color;
@@ -849,6 +850,10 @@ select {
                     }
                 }
             }
+
+            @include breakpoints(rotate) {
+                margin: 0 190px 0 0 !important;
+            }
             @include breakpoints(media-logo) {
                 margin: 0 190px 0 0;
             }
@@ -907,9 +912,9 @@ select {
                 display: none;
             }
             @include breakpoints(mobile) {
-                // margin: 10px auto;
-                // font-size: 12px;
-                display: none;
+                margin: 10px auto;
+                font-size: 12px;
+                // display: none;
             }
             &:hover {
                 border: 1px solid $border-color;
