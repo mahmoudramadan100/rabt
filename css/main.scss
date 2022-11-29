@@ -1188,6 +1188,7 @@ select {
         width: 200px;
         cursor: pointer;
         position: relative;
+        overflow: hidden;
 
         @include breakpoints(small) {
             width: 48%;

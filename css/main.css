@@ -1373,6 +1373,7 @@ select:focus {
   width: 200px;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .fillter #date {
