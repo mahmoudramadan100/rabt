@@ -2061,6 +2061,7 @@ select:focus {
   color: #000;
   display: block;
   margin-top: 15px;
+  margin-bottom: 5px;
 }
 .modal .modal-body .tab-content .form input {
   display: block;
