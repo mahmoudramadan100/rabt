@@ -554,7 +554,7 @@ select:focus {
   .body-login .form-login {
     width: 100%;
     background-color: transparent;
-    padding: 10px 0px;
+    padding: 10px 0;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -844,7 +844,7 @@ select:focus {
   background-color: transparent;
 }
 .home .up-navbar {
-  background: url(../img/bg.webp) no-repeat left top, linear-gradient(206deg, #0e4c51, #304634);
+  background: url("../img/bg.webp") no-repeat left top, linear-gradient(206deg, #0e4c51, #304634);
   padding: 5px 0;
 }
 .home .up-navbar ul {
@@ -932,7 +932,7 @@ select:focus {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .home .navbar .logo img {
-    rotate: 0deg;
+    rotate: 0;
     position: relative;
     top: 0;
     right: 0;
@@ -940,7 +940,7 @@ select:focus {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .home .navbar .logo img {
-    rotate: 0deg;
+    rotate: 0;
     position: relative;
     top: 0;
     right: 0;
@@ -950,14 +950,14 @@ select:focus {
   .home .navbar .logo {
     display: flex;
     align-items: center;
-    rotate: 0deg;
+    rotate: 0;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .home .navbar .logo {
     display: flex;
     align-items: center;
-    rotate: 0deg;
+    rotate: 0;
   }
 }
 .home .navbar .ul-nav {
@@ -1297,14 +1297,14 @@ select:focus {
   padding: 15px 10px;
   margin: 5px 10px;
   display: flex;
-  box-shadow: 2px 1.5px 5px 0px #bdbdbd;
+  box-shadow: 2px 1.5px 5px 0 #bdbdbd;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.8);
 }
 .fillter input {
   font-size: 13px;
   margin: 0 5px;
-  padding: 0px 15px;
+  padding: 0 15px;
   width: 300px;
   height: 35px;
   border: 1px solid #cacaca;
@@ -2522,7 +2522,7 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
   max-width: 300px;
   width: 250px;
   text-align: center !important;
-  box-shadow: 0px 1px 3px 0px #cacaca;
+  box-shadow: 0 1px 3px 0 #cacaca;
 }
 .dropdown-menu-up .ul-box {
   margin: 0 auto;
