@@ -808,7 +808,7 @@ select:focus {
     width: 200px;
     height: 135px;
     position: absolute;
-    top: -35px;
+    top: -45px;
     right: -48px;
     z-index: 99;
     background-color: #fff;
@@ -997,6 +997,11 @@ select:focus {
 @media (min-width: 0) and (max-width: 576px) {
   .home .navbar .ul-nav li a {
     font-size: 12px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .home .navbar .ul-nav {
+    margin: 0 190px 0 0;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
