@@ -126,7 +126,7 @@ select {
     width: 65%;
     height: 100vh;
     position: relative;
-    padding-top: 40px;
+    // padding-top: 40px;
     background-color: transparent;
 
     .content {
@@ -137,9 +137,11 @@ select {
         justify-content: space-around;
         @include breakpoints(small) {
             padding: 0;
+            justify-content: space-between;
         }
         @include breakpoints(mobile) {
             padding: 0;
+            justify-content: space-around;
         }
     }
     .form-login {
@@ -212,7 +214,7 @@ select {
             justify-content: center;
             align-items: center;
             margin: 0;
-            padding: 30px 0 15px;
+            padding: 0;
 
             .form-group {
                 position: relative;
@@ -458,10 +460,10 @@ select {
         @include breakpoints(small) {
             width: 100%;
             background-color: transparent;
-            padding: 0 20px;
+            padding: 10px 0px;
             position: relative;
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
         }
         @include breakpoints(mobile) {
             width: 100%;
@@ -520,7 +522,7 @@ select {
     }
 
     @include rotate {
-        width: 70%;
+        width: 75%;
     }
     @include breakpoints(medium) {
         width: 78% !important;
@@ -1462,6 +1464,9 @@ select {
             display: inline-block;
             color: $gray-color;
             font-size: 14px;
+            @include breakpoints(mobile) {
+                font-size: 10px;
+            }
             a {
                 color: $main-color;
                 font-size: 15px;
@@ -1475,7 +1480,7 @@ select {
                     }
                 }
                 @include breakpoints(mobile){
-                    font-size: 13px;
+                    font-size: 12px;
                 }
             }
             .icon {
@@ -1514,6 +1519,9 @@ select {
             p {
                 color: #000;
                 font-size: 14px;
+                @include breakpoints(mobile) {
+                    font-size: 11px;
+                }
             }
             &::before {
                 content: "";
@@ -1537,6 +1545,9 @@ select {
                 font-size: 14px;
                 color: #000;
                 line-height: 1.8;
+                @include breakpoints(mobile) {
+                    font-size: 11px;
+                }
             }
             &::before {
                 content: "";
@@ -1582,6 +1593,9 @@ select {
                     font-size: 9px;
                     font-weight: bold;
                 }
+                @include breakpoints(mobile) {
+                    font-size: 13px;
+                }
             }
 
             .active {
@@ -1609,6 +1623,9 @@ select {
             color: $main-color;
             font-size: 14px;
             font-weight: bold;
+            @include breakpoints(mobile) {
+                font-size: 12px;
+            }
         }
         p {
             color: $gray-color;
@@ -1616,6 +1633,9 @@ select {
             line-height: 1.7;
             padding: 10px 0 5px;
             margin-bottom: 5px;
+            @include breakpoints(mobile) {
+                font-size: 11px;
+            }
         }
         span {
             display: flex;

@@ -126,7 +126,6 @@ select:focus {
   width: 65%;
   height: 100vh;
   position: relative;
-  padding-top: 40px;
   background-color: transparent;
 }
 .body-login .content {
@@ -139,11 +138,13 @@ select:focus {
 @media (min-width: 576px) and (max-width: 767px) {
   .body-login .content {
     padding: 0;
+    justify-content: space-between;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .body-login .content {
     padding: 0;
+    justify-content: space-around;
   }
 }
 .body-login .form-login {
@@ -228,7 +229,7 @@ select:focus {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 30px 0 15px;
+  padding: 0;
 }
 .body-login .form-login form .form-group {
   position: relative;
@@ -553,10 +554,10 @@ select:focus {
   .body-login .form-login {
     width: 100%;
     background-color: transparent;
-    padding: 0 20px;
+    padding: 10px 0px;
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
@@ -621,7 +622,7 @@ select:focus {
 }
 @media (min-width: 992px) and (max-width: 1130px) {
   .body-login {
-    width: 70%;
+    width: 75%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1664,6 +1665,11 @@ select:focus {
   color: #cacaca;
   font-size: 14px;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .title li {
+    font-size: 10px;
+  }
+}
 .person-content .title li a {
   color: #66bbcd;
   font-size: 15px;
@@ -1681,7 +1687,7 @@ select:focus {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .title li a {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 .person-content .title li .icon {
@@ -1723,6 +1729,11 @@ select:focus {
   color: #000;
   font-size: 14px;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .content .subject p {
+    font-size: 11px;
+  }
+}
 .person-content .content .subject::before {
   content: "";
   position: absolute;
@@ -1744,6 +1755,11 @@ select:focus {
   font-size: 14px;
   color: #000;
   line-height: 1.8;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .content .text p {
+    font-size: 11px;
+  }
 }
 .person-content .content .text::before {
   content: "";
@@ -1789,6 +1805,11 @@ select:focus {
   font-size: 9px;
   font-weight: bold;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .nav-tabs li a {
+    font-size: 13px;
+  }
+}
 .person-content .nav-tabs li .active {
   position: relative;
   color: #66bbcd;
@@ -1814,12 +1835,22 @@ select:focus {
   font-size: 14px;
   font-weight: bold;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .box h3 {
+    font-size: 12px;
+  }
+}
 .person-content .box p {
   color: #cacaca;
   font-size: 14px;
   line-height: 1.7;
   padding: 10px 0 5px;
   margin-bottom: 5px;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .box p {
+    font-size: 11px;
+  }
 }
 .person-content .box span {
   display: flex;
