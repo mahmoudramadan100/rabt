@@ -1627,10 +1627,14 @@ select {
         }
         p {
             color: $gray-color;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.7;
             padding: 10px 0 5px;
             margin-bottom: 5px;
+            
+            @include breakpoints(small) {
+                font-size: 12px;
+            }
             @include breakpoints(mobile) {
                 font-size: 11px;
             }
@@ -1681,13 +1685,6 @@ select {
                 color: $gray-color;
                 padding: 0 40px;
             }
-            // a {
-            //     display: block;
-            //     text-align: center;
-            //     font-size: 10px;
-            //     color: $gray-color;
-            //     padding: 0 40px;
-            // }
         }
     }
     .info-icon {
@@ -1791,7 +1788,6 @@ select {
 
     .modal-body {
         margin: 10px;
-
         .nav-tabs {
             list-style: none;
             list-style: none;

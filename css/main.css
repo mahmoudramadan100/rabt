@@ -1848,10 +1848,15 @@ select:focus {
 }
 .person-content .box p {
   color: #cacaca;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.7;
   padding: 10px 0 5px;
   margin-bottom: 5px;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .person-content .box p {
+    font-size: 12px;
+  }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .box p {
