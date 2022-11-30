@@ -1580,6 +1580,9 @@ select {
                 width: 4px;
                 background: rgba($gray-color, 0.3);
                 right: 0;
+                @include breakpoints(small) {
+                    display: none;
+                 }
                 @include breakpoints(mobile) {
                     display: none;
                  }
@@ -1609,6 +1612,9 @@ select {
                 width: 4px;
                 background: rgba($gray-color, 0.3);
                 right: 0;
+                @include breakpoints(small) {
+                    display: none;
+                 }
                 @include breakpoints(mobile) {
                    display: none;
                 }
@@ -1623,6 +1629,9 @@ select {
     .tab-content {
         border-right: 1px solid rgba($gray-color, 0.8);
 
+        @include breakpoints(small) {
+            border-right: none;
+        }
         @include breakpoints(mobile) {
             border-right: none;
         }
@@ -1684,6 +1693,9 @@ select {
             font-size: 14px;
             font-weight: bold;
             @include breakpoints(mobile) {
+                font-size: 12px;
+            }
+            @include breakpoints(small) {
                 font-size: 12px;
             }
         }
@@ -1753,6 +1765,9 @@ select {
         display: flex;
         cursor: pointer;
         color: #6f6f6f;
+    }
+    @include breakpoints (small) {
+        margin: 10px 0;
     }
     @include breakpoints (mobile) {
         margin: 10px 0;
@@ -2372,7 +2387,7 @@ input[type="checkbox"]:not(:disabled):checked:hover:after {
     top: 35px;
     left: -15px;
     max-width: 300px;
-    max-height: 165px;
+    max-height: 235px;
     overflow-y: auto;
     width: 250px;
     text-align: center !important;

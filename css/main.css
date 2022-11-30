@@ -1810,6 +1810,11 @@ select:focus {
   background: rgba(202, 202, 202, 0.3);
   right: 0;
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  .person-content .content .subject::before {
+    display: none;
+  }
+}
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .content .subject::before {
     display: none;
@@ -1842,6 +1847,11 @@ select:focus {
   background: rgba(202, 202, 202, 0.3);
   right: 0;
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  .person-content .content .text::before {
+    display: none;
+  }
+}
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .content .text::before {
     display: none;
@@ -1854,6 +1864,11 @@ select:focus {
 }
 .person-content .tab-content {
   border-right: 1px solid rgba(202, 202, 202, 0.8);
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .person-content .tab-content {
+    border-right: none;
+  }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .tab-content {
@@ -1919,6 +1934,11 @@ select:focus {
   font-weight: bold;
 }
 @media (min-width: 0) and (max-width: 576px) {
+  .person-content .box h3 {
+    font-size: 12px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
   .person-content .box h3 {
     font-size: 12px;
   }
@@ -1991,6 +2011,11 @@ select:focus {
   display: flex;
   cursor: pointer;
   color: #6f6f6f;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .person-content {
+    margin: 10px 0;
+  }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .person-content {
@@ -2602,7 +2627,7 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
   top: 35px;
   left: -15px;
   max-width: 300px;
-  max-height: 165px;
+  max-height: 235px;
   overflow-y: auto;
   width: 250px;
   text-align: center !important;
