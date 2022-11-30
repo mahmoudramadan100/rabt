@@ -35,7 +35,7 @@ body {
 }
 .bg-color {
     width: 100%;
-    background: url("../img/bg.webp") repeat left top, linear-gradient(206deg,#074b50, #1a4943);
+    background: url("../img/bg.webp") repeat left top, linear-gradient(191deg,#074b50, #1a4943);
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= "#71a57a",endColorstr="#1db1bb",GradientType=1));
     position: relative;
     overflow: hidden;
@@ -257,8 +257,8 @@ select {
                 .icon {
                     position: absolute;
                     left: 10px;
-                    top: 4px;
-                    font-size: 10px;
+                    top: 3px;
+                    font-size: 14px;
                     color: $gray-color;
                     padding: 10px;
                     border-radius: 50%;
@@ -360,6 +360,10 @@ select {
                         font-size: 12px;
                     }
                 }
+
+                span {
+                    padding-right: 0;
+                }
                 a {
                     @include transition;
                     color: $main-color;
@@ -391,7 +395,7 @@ select {
         }
         .btn-login {
             padding: 10px;
-            width: 300px;
+            width: 250px;
             color: #fff;
             margin: 20px auto;
             display: flex;
@@ -412,7 +416,7 @@ select {
                 position: absolute;
                 left: 20px;
                 top: 10px;
-                font-size: 22px;
+                font-size: 20px;
                 color: $icon-color;
             }
             @include breakpoints(medium) {
@@ -429,16 +433,18 @@ select {
             }
         }
         .p {
-            color: $black-color;
+            color: #888e8e;
             font-size: 15px;
             text-align: center;
             line-height: 1.5;
             margin: 20px;
             @include breakpoints(small) {
                 font-size: 14px;
+                color: #fff;
             }
             @include breakpoints(mobile) {
                 font-size: 13px;
+                color: #fff;
             }
         }
         span {
@@ -502,15 +508,23 @@ select {
         width: 100%;
         height: 100%;
         top: 0;
-        right: 0;
+        right: -85px;
         background-color: #fff;
-        rotate: 50deg;
+        rotate: 54deg;
         border-radius: 0 0 0 15%;
         overflow: hidden;
         z-index: 1000;
         // @include breakpoints(medium) {
         //     rotate: 60deg;
         // }
+
+        @include breakpoints(xlarge) {
+            content: "";
+            top: 0;
+            right: -155px;
+            background-color: #fff;
+            rotate: 65deg;
+        }
         @include breakpoints(small) {
             background-color: transparent;
         }
@@ -658,6 +672,19 @@ select {
         @include media-logo {
             max-width: 140px;
         }
+        @include breakpoints(xlarge) {
+            rotate: -15deg;
+            max-width: 250px;
+            max-height: 100px;
+            -o-object-fit: contain;
+            object-fit: contain;
+            display: flex;
+            align-content: center;
+            position: relative;
+            left: 0;
+            right: -40px;
+            top: 37px;
+        }
         @include breakpoints(medium) {
             width: 100px;
             height: 60px;
@@ -691,6 +718,21 @@ select {
     @include media-logo {
         width: 240px;
     }
+    @include breakpoints(xlarge) {
+        position: absolute;
+        top: -100px;
+        right: -45px;
+        z-index: 99;
+        width: 500px;
+        height: 215px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 3.5px 8px -1px #6a6a6a;
+        rotate: 15deg;
+        border-radius: 0 0 20px 45px;
+    }
     @include breakpoints(small) {
         display: none;
     }
@@ -706,7 +748,7 @@ select {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    // height: 100vh;
+    height: 100vh;
     // overflow: hidden;
     background-color: transparent;
     .up-navbar {
@@ -929,7 +971,7 @@ select {
                 width: 40px;
                 left: 0;
                 height: 40px;
-                border: 4px solid rgba($icon-color, 0.8);
+                border: 4px solid rgba($icon-color, 0.4);
                 border-radius: 50%;
                 right: 0;
                 margin: 0 auto;
@@ -947,7 +989,7 @@ select {
                 width: 50px;
                 left: 0;
                 height: 50px;
-                border: 2px solid rgba($icon-color, 0.5);
+                border: 2px solid rgba($icon-color, 0.3);
                 border-radius: 50%;
                 right: 0;
                 margin: 0 auto;
@@ -972,22 +1014,26 @@ select {
             width: 100%;
             height: 100%;
             height: 100vh;
-            position: relative;
+            position: fixed;
             display: flex;
             justify-content: flex-start;
             padding: 30px 0 0;
             display: none;
+            z-index: 999;
+            top: 0;
         }
         @include breakpoints(mobile) {
             flex-direction: column;
             width: 100%;
             height: 100%;
             height: 100vh;
-            position: relative;
+            position: fixed;
             display: flex;
             justify-content: flex-start;
             padding: 30px 0 0;
             display: none;
+            z-index: 999;
+            top: 0;
         }
     }
     // End Navbar
@@ -1068,6 +1114,12 @@ select {
             }
             @include breakpoints(medium) {
                 margin-bottom: 20px;
+            }
+            @include breakpoints(small) {
+                margin: 15px;
+            }
+            @include breakpoints(mobile) {
+                margin: 15px 0;
             }
         }
 
@@ -1453,9 +1505,11 @@ select {
     position: relative;
     .title {
         display: flex;
-        justify-content: space-between;
         padding: 10px 0;
         position: relative;
+        align-items: center;
+        justify-content: space-between;
+
         li {
             display: inline-block;
             color: $gray-color;
@@ -1472,11 +1526,11 @@ select {
                     font-size: 14px;
                     font-weight: 300;
                     @include breakpoints(mobile) {
-                        font-size: 12px;
+                        font-size: 10px;
                     }
                 }
                 @include breakpoints(mobile) {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
             .icon {
@@ -1484,7 +1538,7 @@ select {
                 color: $gray-color;
             }
             @include breakpoints(mobile) {
-                font-size: 12px;
+                font-size: 9px;
             }
         }
         &::after {
@@ -1526,6 +1580,9 @@ select {
                 width: 4px;
                 background: rgba($gray-color, 0.3);
                 right: 0;
+                @include breakpoints(mobile) {
+                    display: none;
+                 }
             }
         }
         .text {
@@ -1552,7 +1609,14 @@ select {
                 width: 4px;
                 background: rgba($gray-color, 0.3);
                 right: 0;
+                @include breakpoints(mobile) {
+                   display: none;
+                }
             }
+        }
+
+        @include breakpoints(mobile) {
+            margin: 15px 0 25px;
         }
 
     }
@@ -1689,6 +1753,9 @@ select {
         display: flex;
         cursor: pointer;
         color: #6f6f6f;
+    }
+    @include breakpoints (mobile) {
+        margin: 10px 0;
     }
 }
 
@@ -1938,7 +2005,7 @@ select {
 
             .line {
                 position: relative;
-                height: 100vh;
+                height: 100%;
                 &::before {
                     content: "";
                     position: absolute;
@@ -2146,7 +2213,7 @@ input[type="checkbox"]:after {
     position: relative;
     display: block;
     left: 2px;
-    top: -15px;
+    top: -12px;
     width: 15px;
     height: 15px;
     border-width: 1px;
@@ -2305,10 +2372,12 @@ input[type="checkbox"]:not(:disabled):checked:hover:after {
     top: 35px;
     left: -15px;
     max-width: 300px;
+    max-height: 165px;
+    overflow-y: auto;
     width: 250px;
     text-align: center !important;
-    box-shadow: 0 1px 3px 0 $gray-color;
-
+    box-shadow: 0 1px 3px 0 #cacaca;
+    transition: 0.3s;
     .ul-box {
         margin: 0 auto;
         text-align: center;
@@ -2339,6 +2408,23 @@ input[type="checkbox"]:not(:disabled):checked:hover:after {
             }
         }
     }
+    .more- {
+        color: $main-color !important;
+        position: fixed;
+        width: 17%;
+        text-align: center;
+        padding: 6px 0;
+        border-radius: 0 0 8px 8px;
+        background-color: $white-color;
+        a {
+            color: $main-color !important;
+            font-weight: bold;
+            @include transition;
+            &:hover {
+                color: $black-color !important;
+            }
+        }
+    }
 
     &::after {
         content: "";
@@ -2351,3 +2437,8 @@ input[type="checkbox"]:not(:disabled):checked:hover:after {
         background-color: #fff;
     }
 }
+
+
+.dropdown:hover .dropdown-menu-up {
+        display: block;
+    }

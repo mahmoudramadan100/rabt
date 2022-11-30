@@ -20,7 +20,7 @@ body {
 
 .bg-color {
   width: 100%;
-  background: url("../img/bg.webp") repeat left top, linear-gradient(206deg, #074b50, #1a4943);
+  background: url("../img/bg.webp") repeat left top, linear-gradient(191deg, #074b50, #1a4943);
   position: relative;
   overflow: hidden;
 }
@@ -300,8 +300,8 @@ select:focus {
 .body-login .form-login form .form-group .icon {
   position: absolute;
   left: 10px;
-  top: 4px;
-  font-size: 10px;
+  top: 3px;
+  font-size: 14px;
   color: #cacaca;
   padding: 10px;
   border-radius: 50%;
@@ -427,6 +427,9 @@ select:focus {
     font-size: 12px;
   }
 }
+.body-login .form-login form .forget span {
+  padding-right: 0;
+}
 .body-login .form-login form .forget a {
   transition: 0.2s;
   color: #66bbcd;
@@ -466,7 +469,7 @@ select:focus {
 }
 .body-login .form-login .btn-login {
   padding: 10px;
-  width: 300px;
+  width: 250px;
   color: #fff;
   margin: 20px auto;
   display: flex;
@@ -489,7 +492,7 @@ select:focus {
   position: absolute;
   left: 20px;
   top: 10px;
-  font-size: 22px;
+  font-size: 20px;
   color: #588464;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -511,7 +514,7 @@ select:focus {
   }
 }
 .body-login .form-login .p {
-  color: #000;
+  color: #888e8e;
   font-size: 15px;
   text-align: center;
   line-height: 1.5;
@@ -520,11 +523,13 @@ select:focus {
 @media (min-width: 576px) and (max-width: 767px) {
   .body-login .form-login .p {
     font-size: 14px;
+    color: #fff;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .body-login .form-login .p {
     font-size: 13px;
+    color: #fff;
   }
 }
 .body-login .form-login span {
@@ -603,12 +608,21 @@ select:focus {
   width: 100%;
   height: 100%;
   top: 0;
-  right: 0;
+  right: -85px;
   background-color: #fff;
-  rotate: 50deg;
+  rotate: 54deg;
   border-radius: 0 0 0 15%;
   overflow: hidden;
   z-index: 1000;
+}
+@media (min-width: 1401px) and (max-width: 3000px) {
+  .body-login::after {
+    content: "";
+    top: 0;
+    right: -155px;
+    background-color: #fff;
+    rotate: 65deg;
+  }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .body-login::after {
@@ -784,6 +798,21 @@ select:focus {
     max-width: 140px;
   }
 }
+@media (min-width: 1401px) and (max-width: 3000px) {
+  .logo img {
+    rotate: -15deg;
+    max-width: 250px;
+    max-height: 100px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: flex;
+    align-content: center;
+    position: relative;
+    left: 0;
+    right: -40px;
+    top: 37px;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .logo img {
     width: 100px;
@@ -824,6 +853,23 @@ select:focus {
     width: 240px;
   }
 }
+@media (min-width: 1401px) and (max-width: 3000px) {
+  .logo {
+    position: absolute;
+    top: -100px;
+    right: -45px;
+    z-index: 99;
+    width: 500px;
+    height: 215px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 3.5px 8px -1px #6a6a6a;
+    rotate: 15deg;
+    border-radius: 0 0 20px 45px;
+  }
+}
 @media (min-width: 576px) and (max-width: 767px) {
   .logo {
     display: none;
@@ -841,6 +887,7 @@ select:focus {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  height: 100vh;
   background-color: transparent;
 }
 .home .up-navbar {
@@ -1084,7 +1131,7 @@ select:focus {
   width: 40px;
   left: 0;
   height: 40px;
-  border: 4px solid rgba(88, 132, 100, 0.8);
+  border: 4px solid rgba(88, 132, 100, 0.4);
   border-radius: 50%;
   right: 0;
   margin: 0 auto;
@@ -1106,7 +1153,7 @@ select:focus {
   width: 50px;
   left: 0;
   height: 50px;
-  border: 2px solid rgba(88, 132, 100, 0.5);
+  border: 2px solid rgba(88, 132, 100, 0.3);
   border-radius: 50%;
   right: 0;
   margin: 0 auto;
@@ -1138,11 +1185,13 @@ select:focus {
     width: 100%;
     height: 100%;
     height: 100vh;
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: flex-start;
     padding: 30px 0 0;
     display: none;
+    z-index: 999;
+    top: 0;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
@@ -1151,11 +1200,13 @@ select:focus {
     width: 100%;
     height: 100%;
     height: 100vh;
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: flex-start;
     padding: 30px 0 0;
     display: none;
+    z-index: 999;
+    top: 0;
   }
 }
 .home .info {
@@ -1238,6 +1289,16 @@ select:focus {
 @media (min-width: 768px) and (max-width: 991px) {
   .home .info .import {
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .home .info .import {
+    margin: 15px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .home .info .import {
+    margin: 15px 0;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1662,9 +1723,10 @@ select:focus {
 }
 .person-content .title {
   display: flex;
-  justify-content: space-between;
   padding: 10px 0;
   position: relative;
+  align-items: center;
+  justify-content: space-between;
 }
 .person-content .title li {
   display: inline-block;
@@ -1688,12 +1750,12 @@ select:focus {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .title li a span {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .title li a {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 .person-content .title li .icon {
@@ -1702,7 +1764,7 @@ select:focus {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .person-content .title li {
-    font-size: 12px;
+    font-size: 9px;
   }
 }
 .person-content .title::after {
@@ -1748,6 +1810,11 @@ select:focus {
   background: rgba(202, 202, 202, 0.3);
   right: 0;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .content .subject::before {
+    display: none;
+  }
+}
 .person-content .content .text {
   position: relative;
   padding: 0 15px;
@@ -1774,6 +1841,16 @@ select:focus {
   width: 4px;
   background: rgba(202, 202, 202, 0.3);
   right: 0;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .content .text::before {
+    display: none;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content .content {
+    margin: 15px 0 25px;
+  }
 }
 .person-content .tab-content {
   border-right: 1px solid rgba(202, 202, 202, 0.8);
@@ -1914,6 +1991,11 @@ select:focus {
   display: flex;
   cursor: pointer;
   color: #6f6f6f;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .person-content {
+    margin: 10px 0;
+  }
 }
 
 .btn-send {
@@ -2175,7 +2257,7 @@ select:focus {
 }
 .modal .modal-body .export .line {
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 .modal .modal-body .export .line::before {
   content: "";
@@ -2389,7 +2471,7 @@ input[type=checkbox]:after {
   position: relative;
   display: block;
   left: 2px;
-  top: -15px;
+  top: -12px;
   width: 15px;
   height: 15px;
   border-width: 1px;
@@ -2520,9 +2602,12 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
   top: 35px;
   left: -15px;
   max-width: 300px;
+  max-height: 165px;
+  overflow-y: auto;
   width: 250px;
   text-align: center !important;
   box-shadow: 0 1px 3px 0 #cacaca;
+  transition: 0.3s;
 }
 .dropdown-menu-up .ul-box {
   margin: 0 auto;
@@ -2554,6 +2639,23 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
   color: #66bbcd;
   font-weight: bold;
 }
+.dropdown-menu-up .more- {
+  color: #66bbcd !important;
+  position: fixed;
+  width: 17%;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+}
+.dropdown-menu-up .more- a {
+  color: #66bbcd !important;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.dropdown-menu-up .more- a:hover {
+  color: #000 !important;
+}
 .dropdown-menu-up::after {
   content: "";
   position: absolute;
@@ -2563,4 +2665,8 @@ input[type=checkbox]:not(:disabled):checked:hover:after {
   height: 10px;
   transform: rotate(45deg);
   background-color: #fff;
+}
+
+.dropdown:hover .dropdown-menu-up {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
